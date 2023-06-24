@@ -1,0 +1,33 @@
+def metraj_programi():
+    malzemeler = {}  # Malzemeleri depolamak için boş bir sözlük oluşturulur
+    toplam_maliyet = 0
+
+    while True:
+        malzeme = input("Malzeme adını girin (Çıkmak için 'q' ya da 'Q' tuşuna basın): ")
+        if malzeme.lower() == 'q':
+            break
+
+        miktar = float(input("Miktarı girin: "))
+        birim_fiyat = float(input("Birim fiyatı girin: "))
+
+        malzemeler[malzeme] = miktar  # Malzeme ve miktar sözlüğe eklenir
+        maliyet = miktar * birim_fiyat
+        toplam_maliyet += maliyet
+
+        print(f"{malzeme}: {miktar} birim, Birim Fiyat: {birim_fiyat}, Maliyet: {maliyet}")
+
+    print(f"Toplam Maliyet: {toplam_maliyet}")
+
+
+metraj_programi()
+Bu program, kullanıcıdan malzeme adını, miktarını ve birim fiyatını alarak her bir malzeme için maliyet hesaplar ve toplam maliyeti görüntüler. Kullanıcı "q" veya "Q" tuşuna basarak programdan çıkabilir.
+
+Örneğin, kullanıcıya "Çimento" malzemesinin miktarını 100 ve birim fiyatını 10 olarak girmesi istenir. Program, bu girdilere göre "Çimento: 100 birim, Birim Fiyat: 10, Maliyet: 1000" şeklinde bir çıktı verir. Kullanıcı başka malzemelerin bilgilerini girebilir ve program, her malzeme için maliyetleri toplayarak sonunda toplam maliyeti görüntüler.
+
+Bu örnek, basit bir metraj programının temel işlevlerini göstermektedir. Gerçek bir inşaat projesinde kullanılacak bir metraj programı daha karmaşık olabilir ve daha fazla işlevselliğe sahip olabilir. Bu nedenle, ihtiyaçlarınıza ve gereksinimlerinize göre programı özelleştirmeniz gerekebilir.
+
+
+
+
+
+
